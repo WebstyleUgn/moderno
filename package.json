@@ -1,9 +1,13 @@
 {
-  "name": "start-gulp",
+  "name": "gulp-start",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
@@ -17,13 +21,8 @@
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Eugene Lakhno",
-  "license": "ISC",
-  "browserslist": [
-    "not dead",
-    "last 8 versions"
+  "browsers": [
+    "latest 8 versions",
+    "not dead"
   ]
 }
