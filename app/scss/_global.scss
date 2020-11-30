@@ -14,6 +14,11 @@ a {
     color: $text;
 }
 
+html,
+body {
+    height: 100vh;
+}
+
 ul,
 li {
     margin: 0;
@@ -27,6 +32,22 @@ body {
     font-weight: 400;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+    // align-self: baseline;
+	flex: 0 0 auto;
 }
 
 .container {
@@ -47,6 +68,10 @@ body {
     }
 }
 
+.page-content{
+    background-color: $grey;
+  }
+
 .title {
     color: $bg;
     font-weight: 700;
@@ -60,6 +85,38 @@ body {
     display: inline-block;
     margin-right: 13px;
 }
+
+.breadcrumbs{
+    &__inner{
+      padding: 45px 0px 40px;
+      overflow: hidden;
+      width: 1200px;
+    }
+    &__list{
+      li{
+        display: inline-block;
+        position: relative;
+        & + li{
+          padding-left: 24px;
+          &::before{
+            content: '-';
+            position: absolute;
+            left: 8px;
+            color: $green;
+          }
+        }
+        &:last-child{
+          a,
+          span{
+            color: $bg;
+          }
+        }
+      }
+      a{
+        color: #b0bec5;
+      }
+    }
+  }
 
 .angle-right {
     position: relative;
